@@ -44,6 +44,6 @@ PLEASE NOTE: that the free tier of localstack does not provide persistence withi
 
 LocalStack provides an interesting set of tooling, with lots of potential, but in practice for many of teh more complex services where local Proof-of-Concept modeling would be most useful (EKS, for instance), the stack only _simulates_ deployment, mostly acting as a syntax linter.
 
-That being the case, it's actual usefulness is mixed.  It was an interesting rabbit hole to explore, but it's very much as case where for your individual stacks _'Your Milage **Will** Vary' (YMWV)_.
+That being the case, it's actual usefulness is mixed.  It was an interesting rabbit hole to explore, but it's very much as case where for your individual stacks _'Your Mileage **Will** Vary' (YMWV)_.
 
 Experiment for yourself.  See what you think.
