@@ -1,3 +1,8 @@
+---
+layout: single
+title: Overview
+---
+
 # EKS Platform Reference Architecture
 
 ## System Overview

@@ -12,11 +12,6 @@ markdown: kramdown
 plugins:
   - jekyll-include-cache
 
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:path/
-
 defaults:
   - scope:
       path: ""
