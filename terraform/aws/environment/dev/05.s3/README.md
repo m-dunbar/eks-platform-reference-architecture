@@ -19,6 +19,12 @@ As an aside, consideration should be given to the risk that the potential bad ac
 
 - implement module for creation of standardized buckets using an s3.bucket_list.auto.tfvars
 
+## Further Reading
+
+For further information regarding AWS KMS concepts, the service it provides, and it's implementation, see [AWS S3 Documentation](https://docs.aws.amazon.com/s3/).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's S3 Resource Documentation for (at an absolute minimum) [aws_s3bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket), and [aws_s3_bucket_server_side_encryption_configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration).
+
 ---
 
 © 2025 Matthew Dunbar  

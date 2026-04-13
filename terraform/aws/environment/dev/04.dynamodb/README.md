@@ -2,7 +2,7 @@
 
 DynamoDB is used here to provide a central source for terraform locks.  This prevents terraform state collisions between more than one administrator using terraform at the same time.  Locks are used when performing `plan` and `apply`, to prevent concurrent attempts to modify tfstate, which could result in inconsistant plans or the corruption of the actual tfstate.
 
-# Provioning choices
+## Provioning choices
 
 | Attribute | Value | Reason |
 |----------------|-------------|--------|
@@ -14,6 +14,12 @@ DynamoDB is used here to provide a central source for terraform locks.  This pre
 | server_side_encryption_enabled | true | It is recommended best practice to encrypt all data at rest. |
 | server_side_encryption_kms_key_arn | data.aws_kms_alias.terraform.arn | locical referernce to the `terraform` key (via human-friendly alias) |
 | ttl_enabled | false | no ttl is required |
+
+## Further Reading
+
+For further information regarding AWS KMS concepts, the service it provides, and it's implementation, see [AWS DynamoDB Documentation](https://docs.aws.amazon.com/dynammodb/).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [DynamoDB Module Documentation](https://registry.terraform.io/modules/terraform-aws-modules/dynamodb-table/aws/latest).
 
 ---
 

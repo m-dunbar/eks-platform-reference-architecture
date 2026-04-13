@@ -96,6 +96,12 @@ AZ subnet: [10.0.48.0/24]
  └─ Private: 10.0.48.64/26
 ```
 
+## Further Reading
+
+For further information regarding IP Address Manager, concepts, and the service it provides, and it's implementation, see [AWS IPAM Documentation](https://docs.aws.amazon.com/vpc/latest/ipam/what-it-is-ipam.html).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [IPAM Resource Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_ipam).
+
 ---
 
 © 2025 Matthew Dunbar  

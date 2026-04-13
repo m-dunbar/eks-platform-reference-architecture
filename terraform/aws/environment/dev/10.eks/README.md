@@ -36,7 +36,7 @@ Observability should be added following the addition of application workloads to
 
 ## Cost Comparisons of different EKS deployment models
 
-<!-- markdownlint-disable-next-line MD036>
+<!-- markdownlint-disable-next-line MD036-->
 _(Very basic overview.  Expand later.)_
 
 ### EKS Managed Node Group -- the model implemented here
@@ -64,6 +64,12 @@ Often considerably more expensive for persistent, predictable loads, but the Far
 Auto-scales nodes according to pod-based demand (basically, similar to AWS-managed Karpenter).
 
 Auto-mode provides an on-ramp for teams with little capacity planning expertise expertise.  It _can_ be lower cost than over-provisioned Managed Node Groups, based upon potential savings via cluster node autoscaling.
+
+## Further Reading
+
+For further information regarding AWS KMS concepts, the service it provides, and it's implementation, see [AWS EKS Documentation](https://docs.aws.amazon.com/eks/).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [EKS Module Documentation](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest).
 
 ---
 

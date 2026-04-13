@@ -27,6 +27,12 @@ Subnets (AZ A):
 - Security Group
 - Internet Gateway
 
+## Further Reading
+
+For further information regarding AWS KMS concepts, the service it provides, and it's implementation, see [AWS VPC Documentation](https://docs.aws.amazon.com/vpc/).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [VPC Module Documentation](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest).
+
 ---
 
 © 2025 Matthew Dunbar  

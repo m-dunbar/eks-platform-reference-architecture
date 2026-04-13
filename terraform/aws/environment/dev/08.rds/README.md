@@ -50,6 +50,12 @@ If you decide you want the other alternative, you can also deactivate any select
 
 `make mariadb-inactive` or `make aurora-inactive`
 
+## Further Reading
+
+For further information regarding AWS KMS concepts, the service it provides, and it's implementation, see [AWS RDS Documentation](https://docs.aws.amazon.com/kds/).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [RDS Module Documentation](https://registry.terraform.io/modules/terraform-aws-modules/rds/aws/latest).
+
 ---
 
 © 2025 Matthew Dunbar  

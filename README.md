@@ -1,4 +1,4 @@
-# Terraform Integration Templates
+# EKS Platform Reference Architecture
 
 [Terraform](https://terraform.io/), by Hashicorp, is one of the most widely-adopted, open-source Infrastructure-as-Code (IaC) platforms in use world-wide.<sup><a href="#fn1" id="ref1">1</a></sup>
 

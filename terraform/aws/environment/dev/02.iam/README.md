@@ -16,6 +16,12 @@ In this example, Auth0 is the IdP.  Users are created within Auth0, and assigned
 
 Policy assignments are a combination of both AWS-managed and customer Managed Policies.
 
+## Further Reading
+
+For further information regarding AWS IAM, concepts, the service it provides, and it's implementation, see [AWS IAM Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
+
+For further information regarding Terraform's Resource configuration, see Hashicorp's [IAM Resource Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_ipam).
+
 ---
 
 © 2025 Matthew Dunbar  
