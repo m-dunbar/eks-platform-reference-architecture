@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Platform Engineering Principles (System Invariants)
 
 ## Purpose

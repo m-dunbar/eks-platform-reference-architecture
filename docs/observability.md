@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Observability Model (Cross-Cutting Domain)
 
 ## Purpose
@@ -106,7 +110,7 @@ Each architectural domain exposes observability hooks:
 
 The observability system is designed as a **collection of consumers and exporters**, not as a centralized logic layer.
 
-### Key principle:
+### Key principle
 
 - Systems emit telemetry
 - Observability systems collect and interpret telemetry

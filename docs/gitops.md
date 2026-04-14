@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # GitOps Model (Delivery Domain)
 
 ## Purpose
@@ -155,7 +159,7 @@ The cluster is NOT the source of truth.
 The system enforces strict separation:
 
 | Function | System |
-|---------|--------|
+| --------- | -------- |
 | Build artifacts | CI pipelines |
 | Validation | CI pipelines |
 | Deployment orchestration | CD pipelines |

@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Architecture Model Specification
 
 ## Purpose
@@ -17,9 +21,11 @@ All other documentation must conform to the rules defined herein.
 The system is composed of four strictly disjoint architectural domains:
 
 ### 1.1 Build Domain
+
 Represents all infrastructure provisioning and composition concerns.
 
 Constraint:
+
 - MUST NOT define runtime behavior
 - MUST NOT define delivery mechanisms
 - MUST NOT define operational concerns
@@ -27,9 +33,11 @@ Constraint:
 ---
 
 ### 1.2 Delivery Domain
+
 Represents system assembly, validation, and artifact lifecycle processes.
 
 Constraint:
+
 - MUST NOT define infrastructure topology
 - MUST NOT define runtime execution semantics
 - MUST NOT embed workload definitions
@@ -37,9 +45,11 @@ Constraint:
 ---
 
 ### 1.3 Runtime Domain
+
 Represents execution-time system behavior within the Kubernetes environment.
 
 Constraint:
+
 - MUST NOT define provisioning logic
 - MUST NOT define CI/CD logic
 - MUST NOT define infrastructure bootstrap logic
@@ -47,9 +57,11 @@ Constraint:
 ---
 
 ### 1.4 Governance Domain
+
 Represents organizational policy, compliance, and multi-environment control.
 
 Constraint:
+
 - MUST remain implementation-agnostic
 - MUST NOT define runtime or infrastructure mechanics directly
 
@@ -61,7 +73,7 @@ Cross-cutting concerns are NOT domains.
 
 They are **orthogonal system properties** applied across all domains.
 
-### Defined properties:
+### Defined properties
 
 - Observability
 - Security
@@ -69,6 +81,7 @@ They are **orthogonal system properties** applied across all domains.
 - Cost Governance
 
 Constraint:
+
 - These MUST NOT introduce new architectural boundaries
 - These MUST NOT override domain ownership rules
 - These MUST be implemented per-domain, not centrally redefined
@@ -80,15 +93,19 @@ Constraint:
 The system MUST satisfy the following invariants at all times:
 
 ### 3.1 Domain Exclusivity
+
 Each concept MUST belong to exactly one domain.
 
 ### 3.2 Non-Overlap Rule
+
 No two domains may define overlapping responsibility for the same system behavior.
 
 ### 3.3 Implementation Isolation
+
 Implementation details MUST NOT appear in this document.
 
 ### 3.4 No Structural Leakage
+
 No domain may assume internal structure of another domain.
 
 ---

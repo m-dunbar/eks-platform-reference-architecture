@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Workloads Model (Execution Domain)
 
 ## Purpose
@@ -73,7 +77,7 @@ Each workload MUST be self-contained:
 
 Ingress is defined at the workload level and not at the platform level.
 
-### Rules:
+### Rules
 
 - Each workload MAY define its own ingress resources
 - Ingress MUST integrate with AWS Load Balancer Controller
@@ -93,6 +97,7 @@ Workloads are categorized into three primary types:
 - Event-driven services
 
 Characteristics:
+
 - horizontally scalable
 - no persistent local state
 - externalized persistence layer
@@ -105,6 +110,7 @@ Characteristics:
 - Stateful processing services
 
 Characteristics:
+
 - persistent volume usage
 - controlled scaling constraints
 - strict scheduling rules
@@ -118,6 +124,7 @@ Characteristics:
 - one-off execution workloads
 
 Characteristics:
+
 - ephemeral execution
 - restart-controlled lifecycle
 - resource-intensive bursts

@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Infrastructure Model (Build Domain)
 
 ## Purpose
@@ -50,7 +54,7 @@ Infrastructure MUST be applied in a deterministic sequence:
 
 Each infrastructure layer MUST maintain an independent Terraform state boundary.
 
-### Rules:
+### Rules
 
 - Each layer has a dedicated state backend configuration
 - State is stored in encrypted S3 buckets
@@ -63,13 +67,14 @@ Each infrastructure layer MUST maintain an independent Terraform state boundary.
 
 Cross-layer dependencies MUST be resolved using explicit data-source lookups.
 
-### Constraint Model:
+### Constraint Model
 
 - Remote state outputs SHOULD NOT be used unless no alternative exists
 - Data sources are preferred for runtime resolution of dependencies
 - Resource identity must be discoverable via tagging or provider APIs
 
 This ensures:
+
 - reduced coupling between layers
 - minimized dependency fragility
 - explicit runtime resolution behavior
@@ -80,7 +85,7 @@ This ensures:
 
 All infrastructure resources MUST implement a consistent tagging model.
 
-### Required tags:
+### Required tags
 
 - `environment`
 - `service`
@@ -88,7 +93,8 @@ All infrastructure resources MUST implement a consistent tagging model.
 - `cost_center`
 - `managed_by`
 
-### Rules:
+<!-- markdownlint-disable-next-line MD024 -->
+### Rules
 
 - Tags are mandatory, not optional
 - Tags are used for runtime discovery and governance
@@ -117,19 +123,24 @@ Module design principles:
 The system includes a controlled bootstrap process:
 
 ### Phase 1: Local Initialization
+
 - initial provisioning uses local Terraform state
 
 ### Phase 2: Backend Promotion
+
 - S3 + DynamoDB backend is provisioned
 
 ### Phase 3: State Migration
+
 - existing local state is migrated into remote backend
 - encryption at rest is enforced
 
 ### Phase 4: Backend Lock-In
+
 - all subsequent layers are required to use remote backend
 
 This ensures:
+
 - reproducible bootstrap
 - secure state transition
 - consistent backend enforcement
@@ -160,6 +171,7 @@ The Build Domain explicitly does NOT define:
 - application deployment models
 
 These belong to other domains:
+
 - Runtime → platform.md
 - Delivery → gitops.md
 - Observability → observability.md

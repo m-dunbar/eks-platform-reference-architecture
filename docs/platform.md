@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # Platform Model (Runtime Domain)
 
 ## Purpose
@@ -71,6 +75,7 @@ The Runtime Domain consumes only:
 - Kubernetes API abstractions
 
 NOT:
+
 - Terraform modules
 - state structures
 - provisioning logic
@@ -107,6 +112,7 @@ Node groups are defined as logically separated compute pools:
   - High-memory / compute-intensive workloads
 
 Each node group is isolated via:
+
 - labels
 - taints/tolerations
 - IAM role separation where required
@@ -125,7 +131,7 @@ The platform uses AWS-native ingress integration:
 - Ingress resources map directly to AWS ALB provisioning
 - Ingress definitions are workload-scoped (not platform-scoped)
 
-### Constraints:
+### Constraints
 
 - No manual LoadBalancer provisioning
 - No direct ELB/ALB resource management outside Kubernetes
@@ -147,7 +153,7 @@ External DNS management is handled through Kubernetes-driven automation:
 
 The runtime networking model is based on VPC-native Kubernetes integration.
 
-### Key properties:
+### Key properties
 
 - Pods receive VPC-routable networking (CNI-based model)
 - Service networking is cluster-internal unless explicitly exposed

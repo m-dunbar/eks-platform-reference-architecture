@@ -1,9 +1,8 @@
 ---
 layout: single
-title: Overview
 ---
 
-# EKS Platform Reference Architecture
+# Overview
 
 ## System Overview
 
@@ -18,6 +17,7 @@ It is designed as a coherent platform system model rather than a collection of i
 The system is organized into four primary architectural planes:
 
 ### 1. Build Plane — Infrastructure Construction
+
 Defines the foundational infrastructure layer responsible for provisioning AWS resources and establishing baseline platform primitives.
 
 This plane establishes:
@@ -30,6 +30,7 @@ This plane establishes:
 ---
 
 ### 2. Delivery Plane — Automation and CI/CD
+
 Defines the system assembly and delivery layer responsible for artifact creation, validation, and controlled promotion into runtime environments.
 
 This plane governs:
@@ -42,6 +43,7 @@ This plane governs:
 ---
 
 ### 3. Runtime Plane — Workload Execution
+
 Defines the operational execution environment in which workloads are deployed and executed.
 
 This plane represents:
@@ -54,6 +56,7 @@ This plane represents:
 ---
 
 ### 4. Governance Plane — Identity and Policy Control (Planned)
+
 Defines the future organizational and multi-account governance layer.
 
 This plane introduces:
