@@ -1,8 +1,7 @@
 ---
 layout: single
+title: Overview
 ---
-
-# Overview
 
 ## System Overview
 
