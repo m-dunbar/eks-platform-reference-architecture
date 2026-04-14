@@ -1,49 +1,28 @@
 docs:
   - title: Overview
     url: /
-    children:
-      - title: Architecture
-        children:
-          - title: System Architecture
-            url: /architecture/
-          - title: Design Principles
-            url: /principles/
-      - title: Platform Planes
-        children:
-          - title: Infrastructure (Build Plane)
-            url: /infrastructure/
-          - title: Platform (Runtime Plane)
-            url: /platform/
-      - title: Workloads
-        url: /workloads/
-      - title: Observability
-        url: /observability/
-      - title: Delivery
-        children:
-          - title: GitOps / Delivery
-            url: /gitops/
 
   - title: Architecture
     children:
       - title: System Architecture
         url: /docs/architecture/
       - title: Design Principles
-        url: /docs/principles/
+        url: /principles/
 
   - title: Platform Planes
     children:
       - title: Infrastructure (Build Plane)
-        url: /docs/infrastructure/
+        url: /infrastructure/
       - title: Platform (Runtime Plane)
-        url: /docs/platform/
+        url: /platform/
 
   - title: Workloads
-    url: /docs/workloads/
+    url: /workloads/
 
   - title: Observability
-    url: /docs/observability/
+    url: /observability/
 
   - title: Delivery
     children:
       - title: GitOps / Delivery
-        url: /docs/gitops/
+        url: /gitops/
