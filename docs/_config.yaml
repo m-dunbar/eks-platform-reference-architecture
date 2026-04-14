@@ -14,14 +14,14 @@ plugins:
 
 defaults:
   - scope:
-      path: "docs"
+      path: ""
     values:
       layout: single
       toc: true
       toc_sticky: true
       author_profile: false
       sidebar:
-        nav: "docs"
+        nav: ""
 
 
 exclude:
