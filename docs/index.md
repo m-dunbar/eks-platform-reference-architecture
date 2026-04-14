@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Overview
+title: Conceptual Schema
 ---
 
 ## System Overview
@@ -15,7 +15,7 @@ It is designed as a coherent platform system model rather than a collection of i
 
 The system is organized into four primary architectural planes:
 
-### 1. Build Plane — Infrastructure Construction
+### 1. [Build Plane](infrastructure.md) — Infrastructure Construction
 
 Defines the foundational infrastructure layer responsible for provisioning AWS resources and establishing baseline platform primitives.
 
@@ -28,7 +28,7 @@ This plane establishes:
 
 ---
 
-### 2. Delivery Plane — Automation and CI/CD
+### 2. [Delivery Plane](gitops.md) — Automation and CI/CD
 
 Defines the system assembly and delivery layer responsible for artifact creation, validation, and controlled promotion into runtime environments.
 
@@ -41,14 +41,14 @@ This plane governs:
 
 ---
 
-### 3. Runtime Plane — Workload Execution
+### 3. [Runtime Plane](platform.md) — [Workload Execution](workloads.md)
 
 Defines the operational execution environment in which workloads are deployed and executed.
 
 This plane represents:
 
 - Kubernetes-based application runtime environment (EKS)
-- Workload scheduling and execution model
+- Kubernetes scheduling and runtime capability model (node topology, scheduling constraints, and platform guarantees)
 - Service exposure patterns via ingress controllers
 - Runtime identity via IAM-integrated access control
 
@@ -70,7 +70,7 @@ This plane introduces:
 
 The platform incorporates system-wide concerns that span all architectural planes:
 
-- Observability (metrics, logs, traces)
+- [Observability](observability.md) (metrics, logs, traces)
 - Security (identity, access control, workload trust boundaries)
 - Identity (IAM and tagging-based resource classification)
 - Cost governance (resource attribution and accountability model)
@@ -109,13 +109,13 @@ Each phase extends the system without redefining prior structural contracts.
 
 The full system specification is decomposed into domain-specific documentation:
 
-- `architecture.md` → system ontology and decomposition rules
-- `infrastructure.md` → Terraform-based build system
-- `platform.md` → EKS runtime architecture
-- `workloads.md` → application execution model
-- `gitops.md` → CI/CD and GitOps delivery system
-- `observability.md` → telemetry and system visibility model
-- `principles.md` → system invariants and constraints
+- [architecture](architecture.md) → system ontology and decomposition rules
+- [infrastructure](infrastructure.md) → Terraform-based build system
+- [platform](platform.md) → EKS runtime architecture
+- [workloads](workloads.md) → application deployment and execution specification layer (consumes runtime platform capabilities)
+- [gitops](gitops.md) → CI/CD and GitOps delivery system
+- [observability](observability.md) → telemetry and system visibility model
+- [principles](principles.md) → system invariants and constraints
 
 ---
 

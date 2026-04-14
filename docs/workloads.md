@@ -74,14 +74,58 @@ Each workload MUST be self-contained:
 
 ## 4. Ingress Integration Model
 
-Ingress is defined at the workload level and not at the platform level.
+Ingress is defined at the workload level and represents the canonical service exposure intent for a workload.
 
-### Rules
+### 4.1 Responsibility Model
 
-- Each workload MAY define its own ingress resources
-- Ingress MUST integrate with AWS Load Balancer Controller
-- Route53 records are provisioned via ExternalDNS based on ingress metadata
-- No manual AWS load balancer configuration is permitted
+Each workload MAY define Kubernetes Ingress resources.
+
+Ingress resources are the **single source of truth for external exposure intent**.
+
+They are consumed independently by two platform-provided controllers:
+
+- AWS Load Balancer Controller (provisions and manages ALBs)
+- ExternalDNS (provisions and reconciles Route53 DNS records)
+
+These controllers do NOT interact with each other and do NOT form a pipeline. They independently observe and reconcile the same Kubernetes ingress state.
+
+---
+
+### 4.2 Field-Level Intent Model
+
+Workload-defined ingress resources provide the declarative fields required by platform controllers, including:
+
+- host / hostname declarations (DNS intent)
+- service routing rules (path / backend mapping)
+- TLS configuration metadata
+- annotations used by AWS Load Balancer Controller
+
+These fields are interpreted independently by each controller:
+
+- AWS Load Balancer Controller interprets ingress rules to provision ALB infrastructure
+- ExternalDNS interprets hostname metadata to provision DNS records in Route53
+
+---
+
+### 4.3 Platform Constraint
+
+The runtime platform provides controller capability only.
+
+It does NOT:
+
+- define ingress resources
+- define DNS records
+- define load balancer configuration
+
+All exposure behavior is derived from workload-defined ingress resources.
+
+---
+
+### 4.4 Structural Invariant
+
+Ingress is the **only valid mechanism for external service exposure**.
+
+All external exposure MUST be expressed via Kubernetes Ingress resources defined at the workload layer.
 
 ---
 

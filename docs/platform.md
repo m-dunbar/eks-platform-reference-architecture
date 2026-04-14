@@ -118,33 +118,33 @@ Each node group is isolated via:
 
 ---
 
-## 4. Service Exposure Model
+## 4. Service Exposure Capability Model
 
-All external service exposure is handled through a standardized ingress abstraction.
+The runtime platform provides the capability for external service exposure via Kubernetes-native ingress mechanisms.
 
-### 4.1 Ingress Controller Strategy
+### 4.1 Ingress Capability
 
-The platform uses AWS-native ingress integration:
+The cluster includes support for:
 
 - AWS Load Balancer Controller
-- Ingress resources map directly to AWS ALB provisioning
-- Ingress definitions are workload-scoped (not platform-scoped)
+- Kubernetes Ingress resources
+- ALB provisioning via Kubernetes API integration
 
-### Constraints
+The platform does NOT define ingress resources.
 
-- No manual LoadBalancer provisioning
-- No direct ELB/ALB resource management outside Kubernetes
-- Ingress is declarative and workload-owned
+### 4.2 DNS Capability
 
----
+The cluster supports DNS reconciliation through ExternalDNS.
 
-### 4.2 DNS Integration
+This enables Kubernetes resources to declare DNS intent via metadata annotations.
 
-External DNS management is handled through Kubernetes-driven automation:
+The platform does NOT define DNS records or domain mappings.
 
-- ExternalDNS controller reconciles DNS records
-- DNS entries are derived from ingress/service metadata
-- Route53 is treated as a declarative target system
+### 4.3 Responsibility Boundary
+
+The runtime platform provides **exposure capabilities only**.
+
+All ingress definitions, service exposure configuration, and DNS intent declarations are defined in the [Workload Execution Domain](workloads.md).
 
 ---
 
