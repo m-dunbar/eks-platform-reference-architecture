@@ -1,0 +1,28 @@
+---
+---
+
+@import "minimal-mistakes";
+
+/* ===== CUSTOM TYPOGRAPHY OVERRIDES ===== */
+
+.page__content {
+  font-size: 0.95rem;      /* default is ~1.0–1.1rem */
+  line-height: 1.45;       /* default ~1.6–1.8 */
+}
+
+/* Reduce heading spacing */
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+/* Narrow content width (this is a big one) */
+.page {
+  max-width: 900px;
+}
+
+/* Optional: tighten paragraphs */
+p {
+  margin-bottom: 0.8rem;
+}
